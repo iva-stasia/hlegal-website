@@ -114,7 +114,7 @@
         z-index: 3;
         transition: all $transition-ms ease-in;
 
-        &__title {
+        & .form__title {
             width: 90%;
         }
 

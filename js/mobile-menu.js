@@ -23,5 +23,6 @@ navList.addEventListener('click', ({ target }) => {
     if (target.closest('.header__nav-item')) {
         nav.classList.remove('mobile-visible');
         overlay.classList.remove('mobile-visible');
+        page.classList.remove('disable-scroll');
     }
 });
