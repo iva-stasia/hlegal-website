@@ -989,7 +989,7 @@ a:focus-visible > .focus {
 .btn:active {
   background-color: #006CCF;
 }
-.btn:focus {
+.btn:focus-visible {
   outline: 2px solid rgba(240, 20, 90, 0.7);
   transition: none;
 }
@@ -1490,14 +1490,8 @@ a:focus-visible > .focus {
   opacity: 0;
   transition: all 200ms ease-in;
 }
-.popup-visible {
-  visibility: visible;
-  opacity: 1;
-}
-.popup-visible .popup__form {
-  top: 50%;
-}
 .popup .close-btn {
+  display: none;
   position: absolute;
   right: 1.875rem;
 }
@@ -1508,6 +1502,7 @@ a:focus-visible > .focus {
 }
 .popup__form {
   position: absolute;
+  height: 100vh;
   top: -20%;
   left: 50%;
   transform: translate(-50%, -50%);
@@ -1524,6 +1519,16 @@ a:focus-visible > .focus {
     height: 100%;
     border-radius: 0rem;
   }
+}
+.popup-visible {
+  visibility: visible;
+  opacity: 1;
+}
+.popup-visible .popup__form {
+  top: 50%;
+}
+.popup-visible .close-btn {
+  display: inline-block;
 }
 
 .quote {

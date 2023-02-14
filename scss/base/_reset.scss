@@ -137,10 +137,6 @@ summary {
     list-style: none;
 }
 
-summary:focus-visible {
-    outline: none;
-}
-
 summary::-webkit-details-marker {
     display: none;
 }
