@@ -24,7 +24,6 @@
         &::before {
             content: '';
             @include flex(center, center);
-            padding-top: rem(6);
             width: rem(92);
             height: rem(92);
             background-color: $clr-basic-white;

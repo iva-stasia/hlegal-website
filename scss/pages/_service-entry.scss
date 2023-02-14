@@ -22,7 +22,7 @@
         }
 
         &::before {
-            content: url(../../assets/images/icons/Ecommerce.svg);
+            content: url(../assets/images/icons/Ecommerce.svg);
             @include flex(center, center);
             padding-top: rem(6);
             width: rem(92);
