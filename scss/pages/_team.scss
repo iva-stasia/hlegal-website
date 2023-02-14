@@ -1,0 +1,67 @@
+@use '../abstracts/' as *;
+
+.quote {
+    padding-top: rem(60);
+    padding-bottom: rem(60);
+
+    @include mq('small') {
+        padding-top: rem(30);
+        padding-bottom: rem(30);
+        font-size: rem(30);
+    }
+}
+
+.team {
+    padding-bottom: rem(60);
+    @include flex(center, stretch);
+    flex-wrap: wrap;
+    gap: rem(60);
+
+    @include mq('small') {
+        flex-direction: column;
+        gap: rem(30);
+    }
+
+    &__card {
+        flex: 1 1 28%;
+
+        &:hover * .team__name {
+            color: $clr-accent;
+        }
+    }
+
+    &__link {
+        display: block;
+    }
+
+    &__photo {
+        height: rem(400);
+        border-radius: rem(12);
+        background: center / cover no-repeat;
+
+        @include mq('small') {
+            height: rem(300);
+        }
+    }
+
+    &__name {
+        margin-top: rem(15);
+        position: relative;
+        @include flex(space-between, flex-start);
+        transition: all $transition-ms ease-in;
+
+        &::after {
+            content: '\e900';
+            padding: rem(6) rem(5) rem(4);
+            font-size: rem(22);
+            font-weight: bold;
+            rotate: -90deg;
+            border-radius: 50%;
+            background-color: $clr-grey-bg-alt;
+        }
+    }
+
+    &__position {
+        margin-top: -4px;
+    }
+}

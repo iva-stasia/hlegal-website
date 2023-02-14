@@ -1,0 +1,95 @@
+@use '../abstracts/' as *;
+
+.page-publications {
+    .main {
+        background-color: $clr-grey-bg;
+    }
+
+    .publications {
+        &__cards-container {
+            border-bottom: none;
+
+            @include mq('small') {
+                flex-direction: column;
+            }
+        }
+
+        &__card {
+            flex: 1 1 31%;
+        }
+    }
+
+    .page__header {
+        padding-bottom: rem(60);
+
+        @include mq('small') {
+            padding-bottom: 0;
+        }
+    }
+}
+
+.switch {
+    margin-top: rem(30);
+    position: relative;
+    display: block;
+    margin-inline: auto;
+    width: rem(233);
+    height: rem(42);
+    @include flex(center, stretch);
+    border-radius: rem(12);
+    background-color: $clr-grey-separator;
+
+    &__input {
+        position: absolute;
+        clip: rect(0, 0, 0, 0);
+        height: 1px;
+        width: 1px;
+        border: 0;
+        overflow: hidden;
+
+        &:checked + .switch__label {
+            background-color: $clr-basic-white;
+        }
+
+        &:checked ~ span {
+            translate: 100%;
+        }
+    }
+
+    &__label {
+        display: block;
+        width: 50%;
+        @include flex(center, center);
+        border-radius: rem(10);
+        border: 2px solid $clr-grey-separator;
+        transition: all $transition-ms ease-in;
+
+        &:hover {
+            cursor: pointer;
+            background-color: $clr-grey-bg;
+        }
+    }
+}
+
+.publications {
+    &__more {
+        position: relative;
+        border-bottom: 2px solid $clr-grey-separator;
+
+        &[open] .publications__more-btn::before {
+            content: 'Less publications';
+        }
+    }
+
+    &__more-btn {
+        display: block;
+        width: max-content;
+        margin-inline: auto;
+        margin-bottom: rem(60);
+        white-space: nowrap;
+
+        &::before {
+            content: 'More publications';
+        }
+    }
+}

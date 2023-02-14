@@ -1,0 +1,160 @@
+@use '../abstracts/functions' as *;
+@use '../abstracts/variables' as *;
+@use '../abstracts/mixins' as *;
+
+.container {
+    max-width: rem(1720);
+    padding-inline: rem(60);
+    margin-inline: auto;
+
+    @include mq('small') {
+        padding-inline: rem(30);
+    }
+}
+
+.container-narrow {
+    padding-inline: rem(180);
+    max-width: rem(1720);
+    margin-inline: auto;
+
+    @include mq('large') {
+        padding-inline: rem(60);
+    }
+
+    @include mq('small') {
+        padding-inline: rem(30);
+    }
+}
+
+.gradient-container {
+    border-radius: 0 0 rem(12) rem(12);
+    background: $clr-gradient-supersoft;
+}
+
+.mobile-hidden {
+    @include mq('small') {
+        display: none !important;
+    }
+}
+
+.mobile-visible {
+    display: none;
+
+    @include mq('small') {
+        display: block;
+    }
+}
+
+.visible {
+    visibility: visible !important;
+    position: relative !important;
+    opacity: 1 !important;
+}
+
+.disable-scroll {
+    overflow: hidden;
+}
+
+.text-sm > *,
+.text-sm {
+    font-size: rem(12);
+    letter-spacing: 1px;
+}
+
+.text-md {
+    font-size: rem(14);
+}
+
+.text-big {
+    font-size: rem(19);
+}
+
+.text-x-big,
+.text-x-big > * {
+    font-size: rem(21);
+}
+
+.text-list,
+.text-list * {
+    font-size: rem(18);
+}
+
+.uppercase {
+    text-transform: uppercase;
+}
+
+.lowercase,
+.lowercase > * {
+    text-transform: lowercase;
+}
+
+.bold {
+    font-weight: $fw-bold;
+}
+
+.title-hero {
+    font-size: rem(38);
+    line-height: 1.2;
+}
+
+.title-big {
+    font-size: rem(30);
+}
+
+.title-medium {
+    font-size: rem(22);
+}
+
+.title-sm {
+    font-size: rem(14);
+    letter-spacing: 1px;
+}
+
+.text-gradient {
+    background: $clr-gradient-red-text;
+    background-clip: text;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+
+.text-white,
+.text-white * {
+    color: $clr-basic-white;
+}
+
+.text-black,
+.text-black * {
+    color: $clr-basic-black;
+}
+
+.text-grey,
+.text-grey * {
+    color: $clr-grey-text;
+}
+
+.text-active,
+.text-active * {
+    color: $clr-active-reg;
+}
+
+.text-main-reg,
+.text-main-reg * {
+    color: $clr-main-reg;
+}
+
+.active-gradient {
+    background: $clr-gradient-red-rev-text;
+    background-clip: text;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+
+.hover-accent,
+.hover-accent * {
+    transition: color $transition-ms ease-in;
+
+    &:hover {
+        cursor: pointer;
+        color: $clr-accent;
+    }
+}

@@ -1,0 +1,22 @@
+@use '../abstracts/' as *;
+
+.gradient-container {
+    position: relative;
+    &::after,
+    &::before {
+        content: '';
+        position: absolute;
+        left: 50%;
+        transform: translateX(-50%);
+        width: calc(100% - rem(40));
+        height: rem(10);
+        background-color: #cacadb;
+        border-radius: 0px 0px rem(12) rem(12);
+    }
+
+    &::before {
+        width: calc(100% - rem(80));
+        bottom: - rem(20);
+        background-color: #E7E7F2;
+    }
+}

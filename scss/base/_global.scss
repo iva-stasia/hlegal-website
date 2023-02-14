@@ -1,0 +1,9 @@
+@use '../abstracts/' as *;
+
+body {
+    background-color: $clr-basic-white;
+
+    @include mq('small') {
+            padding: 0;
+        }
+}

@@ -1,0 +1,34 @@
+@use '../abstracts/' as *;
+
+.services {
+    .page {
+        &__header {
+            position: absolute;
+        }
+
+        &__services {
+            padding-bottom: rem(60);
+        }
+
+        &__partners {
+            margin: rem(80) auto rem(60);
+
+            @include mq('x-large') {
+                margin: rem(60) auto 0;
+                padding: 0;
+            }
+        }
+    }
+
+    .gradient-container {
+        padding-top: rem(176);
+
+        @include mq('medium') {
+            padding-top: rem(280);
+        }
+
+        @include mq('small') {
+            padding-top: rem(135);
+        }
+    }
+}

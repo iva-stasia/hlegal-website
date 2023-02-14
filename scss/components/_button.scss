@@ -1,0 +1,19 @@
+@use '../abstracts/' as *;
+
+.btn {
+    padding: rem(18) rem(30);
+    font-weight: 700;
+    border-radius: rem(12);
+    background-color: $clr-active-reg;
+    box-shadow: 0 0 rem(20) rgba(36, 163, 255, 0.5);
+    transition: all $transition-ms ease-in;
+
+    &:hover {
+        cursor: pointer;
+        background-color: $clr-active-hover;
+    }
+
+    &:active {
+        background-color: $clr-active-active;
+    }
+}

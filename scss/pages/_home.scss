@@ -1,0 +1,179 @@
+@use '../abstracts/' as *;
+
+.home {
+    .page {
+        &__header {
+            position: absolute;
+        }
+
+        &__carousel {
+            margin-top: rem(80);
+        }
+
+        &__tabs {
+            padding-top: rem(60);
+
+            @include mq('small') {
+                margin-top: rem(30);
+            }
+        }
+
+        &__services {
+            margin-top: rem(60);
+            padding-bottom: rem(60);
+        }
+
+        &__partners {
+            margin: rem(60) auto;
+            padding: rem(30);
+
+            @include mq('x-large') {
+                margin: rem(60) auto 0;
+                padding: 0;
+            }
+        }
+    }
+}
+
+.banner {
+    position: relative;
+    min-height: 100vh;
+    @include flex(center, center);
+    background: center / auto 100% no-repeat
+        url(../../assets/images/home/h_symbol.svg);
+
+    &__title {
+        width: 100%;
+        padding-inline: rem(50);
+        text-align: center;
+    }
+
+    &__scroll-btn {
+        position: absolute;
+        left: 50%;
+        bottom: rem(30);
+        transform: translate(-50%);
+        border-radius: 50%;
+        border: 2px solid rgba($color: $clr-basic-white, $alpha: 0.5);
+        transition: all $transition-ms ease-in;
+
+        &::after {
+            content: '\e900';
+            padding: rem(10) rem(8) rem(6);
+            font-size: rem(26);
+        }
+
+        &:hover {
+            border-color: rgba($color: $clr-accent, $alpha: 0.5);
+        }
+    }
+}
+
+.tabs {
+    display: grid;
+    grid-template-columns: minmax(min-content, max-content) 50%;
+    justify-content: center;
+
+    @include mq('medium') {
+        grid-template-columns: 1fr;
+    }
+
+    &.container {
+        @include mq('medium') {
+            padding-inline: 0;
+        }
+    }
+
+    &__labels {
+        margin-right: rem(60);
+        @include flex(center, flex-end);
+        flex-direction: column;
+        gap: rem(30);
+        text-align: right;
+
+        @media screen and (max-width: em(954)) {
+            max-width: min-content;
+        }
+
+        @include mq('medium') {
+            margin: 0 0 rem(60);
+            padding-inline: rem(60);
+            overflow-x: auto;
+            justify-content: flex-start;
+            flex-direction: row;
+            white-space: nowrap;
+            scrollbar-width: none;
+
+            &::-webkit-scrollbar {
+                display: none;
+            }
+        }
+
+        @include mq('small') {
+            margin: 0 0 rem(30);
+            padding-inline: rem(30);
+        }
+    }
+
+    &__content {
+        position: relative;
+        @include flex(flex-start, center);
+        padding-left: rem(60);
+        border-left: 4px solid rgba($color: $clr-basic-white, $alpha: 0.3);
+
+        @include mq('medium') {
+            margin-inline: rem(60);
+            padding: rem(60) 0 0;
+            border-left: none;
+            border-top: 4px solid rgba($color: $clr-basic-white, $alpha: 0.3);
+        }
+
+        @include mq('small') {
+            margin-inline: rem(30);
+            padding: rem(30) 0 0;
+        }
+    }
+
+    &__tab-container {
+        visibility: hidden;
+        position: absolute;
+        opacity: 0;
+        transition: all 400ms ease-in;
+    }
+
+    &__content-title {
+        padding-bottom: rem(30);
+    }
+}
+
+.home .carousel {
+    &__card {
+        display: grid;
+        grid-template-columns: rem(400) minmax(min-content, max-content);
+        border-radius: rem(12);
+        background-color: $clr-grey-bg;
+
+        @include mq('medium') {
+            grid-template-columns: 1fr;
+            grid-template-rows: rem(500) 1fr;
+        }
+    }
+
+    &__card-photo {
+        background-color: grey;
+        background: center / cover no-repeat
+            url(../../assets/images/team/Team-1.jpg);
+    }
+
+    &__card-content {
+        padding: rem(30);
+    }
+
+    &__card-text {
+        padding-bottom: rem(30);
+
+        @include mq('small') {
+            font-size: rem(30);
+        }
+    }
+}

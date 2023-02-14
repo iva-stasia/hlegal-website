@@ -1,0 +1,58 @@
+@use '../abstracts/' as *;
+
+.services {
+    &__title {
+        padding-bottom: rem(60);
+    }
+
+    &__cards-container {
+        display: grid;
+        grid-template-columns: repeat(3, minmax(rem(200), 1fr));
+        gap: rem(60);
+
+        @include mq('medium') {
+            grid-template-columns: repeat(auto-fill, minmax(rem(240), 1fr));
+        }
+    }
+
+    &__card-title {
+        padding-bottom: rem(15);
+        @include flex(flex-start, flex-start);
+        flex-direction: column;
+        gap: rem(30);
+
+        &::before {
+            content: '';
+            @include flex(center, center);
+            padding-top: rem(6);
+            width: rem(92);
+            height: rem(92);
+            background-color: $clr-basic-white;
+            border-radius: rem(24);
+        }
+
+        &.e-com::before {
+            content: url(../../assets/images/icons/Ecommerce.svg);
+        }
+
+        &.support::before {
+            content: url(../../assets/images/icons/Support.svg);
+        }
+
+        &.corporate::before {
+            content: url(../../assets/images/icons/Coprorate.svg);
+        }
+
+        &.trust::before {
+            content: url(../../assets/images/icons/Trust.svg);
+        }
+
+        &.protection::before {
+            content: url(../../assets/images/icons/Protection.svg);
+        }
+
+        &.court::before {
+            content: url(../../assets/images/icons/Court.svg);
+        }
+    }
+}

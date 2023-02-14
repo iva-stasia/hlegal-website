@@ -1,0 +1,80 @@
+@use '../abstracts/' as *;
+
+.footer {
+    padding: rem(30) 0;
+    background-color: $clr-grey-bg;
+
+    & .container {
+        display: grid;
+        grid-template: auto / repeat(2, max-content);
+        justify-content: space-between;
+        gap: rem(20);
+        color: $clr-main-reg;
+
+        @include mq('medium') {
+            grid-template: auto / auto;
+            justify-content: center;
+        }
+    }
+
+    &__address-group {
+        @include flex(flex-start, center);
+
+        @include mq('small') {
+            flex-direction: column;
+            gap: rem(10);
+        }
+    }
+
+    &__map {
+        color: $clr-active-reg;
+        transition: all $transition-ms ease-in;
+
+        &:hover {
+           color: $clr-accent; 
+        }
+    }
+
+    &__contacts {
+        order: 1;
+        @include flex(flex-start, center);
+
+        @include mq('medium') {
+            order: 0;
+        }
+
+        @include mq('small') {
+            margin-bottom: rem(10);
+            flex-direction: column;
+            gap: rem(10);
+        }
+    }
+
+    &__social-link {
+        color: $clr-active-reg;
+        transition: all $transition-ms ease-in;
+
+        &::after {
+            content: '\e905';
+            font-size: rem(38);
+        }
+
+        &:hover {
+            color: $clr-accent;
+        }
+    }
+
+    &__email {
+        color: $clr-active-reg;
+        transition: all $transition-ms ease-in;
+
+        &:hover {
+            color: $clr-accent;
+        }
+    }
+
+    &__copyright {
+        text-align: center;
+        color: $clr-grey-text;
+    }
+}

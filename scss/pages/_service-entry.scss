@@ -1,0 +1,127 @@
+@use '../abstracts/' as *;
+
+.services .publications {
+    margin-top: rem(80);
+    border-radius: rem(12) rem(12) 0 0;
+}
+
+.service-intro {
+    padding-bottom: rem(60);
+    @include flex(center, center);
+    flex-direction: column;
+
+    &__title {
+        padding-bottom: rem(30);
+        @include flex(center, center);
+        flex-direction: column;
+        gap: rem(30);
+        text-align: center;
+
+        @include mq('small') {
+            font-size: rem(30);
+        }
+
+        &::before {
+            content: url(../../assets/images/icons/Ecommerce.svg);
+            @include flex(center, center);
+            padding-top: rem(6);
+            width: rem(92);
+            height: rem(92);
+            background-color: $clr-basic-white;
+            border-radius: rem(24);
+        }
+    }
+
+    &__text + &__text {
+        margin: rem(20) 0 rem(30);
+    }
+
+    &__text {
+        text-align: center;
+    }
+}
+
+.service-more {
+    padding-bottom: rem(60);
+
+    &__title {
+        padding: rem(30) 0;
+        border-top: 4px solid rgba($color: $clr-basic-white, $alpha: 0.5);
+    }
+
+    &__lists-container {
+        @include flex(space-between, flex-start);
+        gap: rem(60);
+
+        @include mq('small') {
+            flex-direction: column;
+            gap: rem(30);
+        }
+    }
+
+    &__list {
+        padding-left: rem(18);
+        flex: 1 1 50%;
+        list-style: outside;
+    }
+
+    &__item + &__item {
+        margin-top: rem(15);
+    }
+
+    &__item::marker {
+        color: $clr-accent;
+    }
+}
+
+.popup {
+    visibility: hidden;
+    position: fixed;
+    top: 0;
+    width: 100vw;
+    height: 100vh;
+    background-color: rgba($color: $clr-main-reg, $alpha: 0.7);
+    z-index: 2;
+    opacity: 0;
+    transition: all $transition-ms ease-in;
+
+    &-visible {
+        visibility: visible;
+        opacity: 1;
+
+        .popup__form {
+            top: 50%;
+        }
+    }
+
+    .close-btn {
+        position: absolute;
+        right: rem(30);
+
+        &::before {
+            content: '\e902';
+            font-size: rem(32);
+            color: $clr-close-btn;
+        }
+    }
+
+    &__form {
+        position: absolute;
+        top: -20%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        box-shadow: 0 rem(15) rem(80) rgba(40, 40, 86, 0.5);
+        z-index: 3;
+        transition: all $transition-ms ease-in;
+
+        &__title {
+            width: 90%;
+        }
+
+        @include mq('small') {
+            width: 100%;
+            height: 100%;
+            border-radius: rem(0);
+        }
+    }
+}

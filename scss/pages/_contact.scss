@@ -1,0 +1,49 @@
+@use '../abstracts/' as *;
+
+.contact {
+    padding-top: rem(60);
+    padding-bottom: rem(60);
+    @include flex(flex-start, flex-start);
+    gap: rem(60);
+    flex-wrap: wrap;
+
+    @include mq('small') {
+        padding-top: rem(30);
+        padding-bottom: rem(30);
+        gap: rem(30);
+    }
+
+    &__form {
+        flex: 1 1 44%;
+    }
+}
+
+.contacts {
+    flex: 1 1 44%;
+
+    & > * + * {
+        padding-top: rem(30);
+    }
+
+    & > *:not(:last-child) {
+        padding-bottom: rem(30);
+        border-bottom: 4px solid $clr-grey-separator;
+    }
+
+    &__contacts {
+        @include flex(flex-start, flex-start);
+        flex-direction: column;
+        gap: rem(15);
+    }
+
+    &__facebook {
+        @include flex(flex-start, center);
+        gap: rem(10);
+
+        &::before {
+            content: '\e905';
+            display: block;
+            font-size: rem(38);
+        }
+    }
+}

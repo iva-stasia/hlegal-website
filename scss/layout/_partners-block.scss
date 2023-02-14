@@ -1,0 +1,96 @@
+@use '../abstracts/' as *;
+
+.partners {
+    max-width: calc(rem(1720) + rem(60));
+
+    &__title {
+        text-align: center;
+    }
+
+    &__logos-container {
+        margin-top: rem(30);
+        display: grid;
+        grid-template-columns: repeat(4, minmax(rem(230), 1fr));
+        grid-template-rows: repeat(6, auto);
+        grid-auto-rows: 0;
+        overflow: hidden;
+        border-radius: rem(12);
+
+        @include mq('x-large') {
+            border-radius: 0;
+        }
+
+        @include mq('medium') {
+            grid-template-columns: repeat(auto-fill, minmax(rem(230), 1fr));
+        }
+    }
+
+    &__link {
+        height: rem(120);
+
+        &::before {
+            @include flex(center, center);
+            height: 100%;
+        }
+
+        &.hillel::before {
+            content: url(../../assets/images/logos/hillel.png);
+            background-color: #1c4280;
+        }
+
+        &.wannabiz::before {
+            content: url(../../assets/images/logos/wannabiz.png);
+            background-color: #143646;
+        }
+
+        &.tapgerine::before {
+            content: url(../../assets/images/logos/tapgerine.png);
+            background-color: #f48b30;
+        }
+
+        &.treedlook::before {
+            content: url(../../assets/images/logos/3dlook.png);
+            background-color: #9e4dc3;
+        }
+
+        &.orangear::before {
+            content: url(../../assets/images/logos/orangear.png);
+            background-color: #fd9339;
+        }
+
+        &.adtelligent::before {
+            content: url(../../assets/images/logos/adtelligent.png);
+            background-color: #e2e2e4;
+        }
+
+        &.clickky::before {
+            content: url(../../assets/images/logos/clickky.png);
+            background-color: #c71c36;
+        }
+
+        &.eco-leasing::before {
+            content: url(../../assets/images/logos/eco-leasing.png);
+            background-color: #dcf3f9;
+        }
+
+        &.infratek::before {
+            content: url(../../assets/images/logos/infratek.png);
+            background-color: #eaeaea;
+        }
+
+        &.city-park::before {
+            content: url(../../assets/images/logos/city-park.png);
+            background-color: #282240;
+        }
+
+        &.artprint::before {
+            content: url(../../assets/images/logos/artprint.png);
+            background-color: #1d4568;
+        }
+
+        &.ultimatecard::before {
+            content: url(../../assets/images/logos/ultimatecard.png);
+            background-color: #000000;
+        }
+    }
+}

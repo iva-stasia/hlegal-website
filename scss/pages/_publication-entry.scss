@@ -1,0 +1,117 @@
+@use '../abstracts/' as *;
+
+.page-publication-entry {
+    .publications {
+        margin-top: rem(60);
+        border-radius: rem(12) rem(12) 0 0;
+    }
+}
+
+.page {
+    &__article {
+        margin-top: rem(60);
+
+        @include mq('small') {
+            margin-top: rem(30);
+        }
+    }
+}
+
+.article {
+    &__header {
+        padding-bottom: rem(30);
+        border-bottom: 4px solid $clr-grey-separator;
+    }
+    &__cover {
+        width: 100%;
+        height: rem(500);
+        object-fit: cover;
+        border-radius: rem(12);
+
+        @include mq('small') {
+            height: rem(300);
+        }
+    }
+
+    &__title {
+        padding: rem(30) 0 rem(15);
+
+        @include mq('small') {
+            font-size: rem(20);
+        }
+    }
+
+    &__content {
+        padding-bottom: rem(30);
+        border-bottom: 4px solid $clr-grey-separator;
+
+        & > * {
+            padding-top: rem(30);
+        }
+
+        & * + * {
+            padding-top: rem(15);
+        }
+    }
+
+    &__text-big {
+        @include mq('small') {
+            font-size: rem(30);
+        }
+    }
+
+    &__figure-ad {
+        max-width: (rem(640));
+        margin-inline: auto;
+        text-align: center;
+    }
+
+    &__ad-img {
+        width: 100%;
+    }
+
+    &__list {
+        list-style: decimal;
+        padding-left: rem(29);
+
+        & ::marker {
+            font-weight: 700;
+            color: $clr-accent;
+        }
+    }
+}
+
+.social {
+    padding-top: rem(30);
+
+    &__link {
+        margin-right: rem(10);
+
+        &::before {
+            padding: rem(9);
+            font-size: rem(24);
+            border-radius: rem(12);
+            background-color: $clr-grey-bg;
+            transition: all $transition-ms ease-in;
+        }
+
+        &:hover::before {
+            background-color: $clr-grey-bg-alt;
+        }
+
+        &.facebook::before {
+            content: '\e904';
+            color: #435695;
+        }
+
+        &.telegram::before {
+            content: '\e909';
+            color: #3cacdc;
+        }
+
+        &.linkedin::before {
+            content: '\e907';
+            color: #1178b3;
+        }
+    }
+}

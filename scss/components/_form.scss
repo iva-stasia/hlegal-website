@@ -1,0 +1,63 @@
+@use '../abstracts/' as *;
+
+.form {
+    padding: rem(30);
+    width: min(80%, rem(650));
+    border-radius: rem(12);
+    background-color: $clr-grey-bg;
+    @include flex(flex-start, stretch);
+    flex-direction: column;
+    gap: rem(30);
+
+    &__title {
+        @include mq('small') {
+            font-size: rem(30);
+        }
+    }
+
+    &__fieldset {
+        @include flex(flex-start, stretch);
+        flex-direction: column;
+    }
+
+    &__input,
+    &__textarea {
+        width: 100%;
+        padding: rem(15);
+        border-radius: rem(8);
+        border: 1px solid;
+        border-color: $clr-basic-white;
+        background-color: $clr-basic-white;
+        transition: all $transition-ms ease-in;
+
+        &::placeholder {
+            color: $clr-grey-text;
+        }
+
+        &:focus {
+            border-color: $clr-active-reg;
+        }
+
+        &:not(:placeholder-shown):not(:focus):invalid {
+            color: #ff0000;
+            border-color: #ff0000;
+        }
+
+        &:disabled {
+            background-color: $clr-grey-bg;
+        }
+    }
+
+    &__input:first-of-type {
+        margin-bottom: rem(15);
+    }
+
+    &__textarea {
+        height: rem(130);
+        resize: none;
+    }
+
+    &__fieldset-title {
+        padding-bottom: rem(15);
+    }
+}

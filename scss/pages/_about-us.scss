@@ -1,0 +1,163 @@
+@use '../abstracts/' as *;
+
+.page {
+    &__intro {
+        margin-top: rem(60);
+    }
+}
+
+.intro {
+    @include flex(center, flex-start);
+    gap: rem(30);
+    flex-wrap: wrap;
+
+    &__desc {
+        flex: 10 1 rem(480);
+    }
+
+    &__title {
+        padding-bottom: rem(30);
+
+        @include mq('small') {
+            font-size: rem(30);
+        }
+    }
+
+    &__text:first-of-type {
+        padding-bottom: rem(20);
+    }
+
+    &__advantages {
+        flex: 1 0 rem(300);
+        padding-left: rem(30);
+        border-left: 4px solid $clr-grey-separator;
+    }
+
+    &__advantages-item + &__advantages-item {
+        margin-top: rem(40);
+    }
+
+    &__advantages-title {
+        padding-bottom: rem(10);
+        display: inline-flex;
+        align-items: center;
+        gap: rem(8);
+
+        &::before {
+            content: '';
+            font-size: rem(32);
+        }
+
+        &.experience::before {
+            content: '\e903';
+        }
+
+        &.clients::before {
+            content: '\e901';
+        }
+
+        &.probono::before {
+            content: '\e908';
+        }
+    }
+}
+
+.team-preview {
+    position: relative;
+    padding: rem(60) 0;
+
+    @include mq('small') {
+        padding: rem(30) 0;
+    }
+
+    &__photo {
+        width: 100%;
+    }
+
+    &__label {
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        font-size: clamp(rem(46), 7vw, rem(96));
+        letter-spacing: rem(63);
+
+        @include mq('small') {
+            font-size: rem(36);
+            letter-spacing: rem(13);
+        }
+    }
+}
+
+.more {
+    @include flex(center, flex-start);
+    gap: rem(60);
+    flex-wrap: wrap;
+    padding-bottom: rem(60);
+
+    @include mq('medium') {
+        gap: rem(30);
+    }
+
+    &__desc {
+        flex: 10 1 rem(480);
+    }
+
+    &__text + &__text {
+        margin-top: rem(20);
+    }
+
+    &__title {
+        flex: 1 0 rem(270);
+
+        @include mq('small') {
+            font-size: rem(30);
+        }
+    }
+}
+
+.about .carousel {
+    background-color: $clr-grey-bg;
+
+    &__title {
+        padding: rem(30);
+        text-align: center;
+    }
+
+    &__card {
+        @include flex(center, center);
+        gap: rem(40);
+
+        @include mq('small') {
+            padding-inline: rem(30);
+        }
+    }
+
+    &__card-item {
+        flex: 1 1 25%;
+        height: rem(110);
+        border-radius: rem(12);
+        background: center / auto rem(60) no-repeat $clr-basic-white;
+
+        @include mq('medium') {
+            height: rem(90);
+            background: center / auto rem(40) no-repeat $clr-basic-white;
+        }
+
+        &:not(:first-of-type) {
+            @include mq('small') {
+                display: none;
+            }
+        }
+    }
+
+    &__card-link {
+        width: 100%;
+        height: 100%;
+    }
+
+    &__buttons-container {
+        padding-bottom: rem(30);
+        border-bottom: 2px solid $clr-grey-separator;
+    }
+}

@@ -1,0 +1,54 @@
+@use '../abstracts/' as *;
+
+.header--dark {
+    .header {
+        &__logo-link {
+            @include mq-min('small') {
+                fill: $clr-main-reg;
+            }
+        }
+
+        &__lang-link {
+            &:hover {
+                background-color: $clr-grey-bg;
+            }
+
+            &.active {
+                color: $clr-basic-white;
+                background-color: $clr-accent;
+            }
+        }
+
+        &__top-bar {
+            color: $clr-grey-text;
+
+            @include mq('small') {
+                background-color: $clr-grey-bg;
+            }
+        }
+
+        &__tel,
+        &__social-link {
+            &:hover {
+                color: $clr-accent;
+            }
+        }
+
+        &__nav-link {
+            color: $clr-active-reg;
+
+            &:hover {
+                border-bottom-color: $clr-active-reg;
+            }
+
+            &.active {
+                color: $clr-accent;
+                border-bottom-color: $clr-accent;
+
+                @include mq('small') {
+                    border-bottom: none;
+                }
+            }
+        }
+    }
+}

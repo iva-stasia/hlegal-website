@@ -1,0 +1,14 @@
+@use '../abstracts/' as *;
+
+.page-prev-title {
+    display: inline-block;
+    padding-bottom: rem(20);
+    transition: color $transition-ms ease-in;
+
+    .icon::after {
+        content: '\e900';
+        padding-right: 2px;
+        transform: rotate(-90deg);
+        font-weight: bold;
+    }
+}

@@ -1,0 +1,21 @@
+@use '../abstracts/' as *;
+
+.dot-separator {
+    & > * {
+            @include flex(flex-end, center);
+        }
+
+        & > *:not(:first-child):before {
+            content: '';
+            display: inline-block;
+            margin-inline: 6px;
+            width: rem(6);
+            height: rem(6);
+            border-radius: 50%;
+            background-color: $clr-grey-text;
+
+            @include mq('small') {
+                display: none;
+            }
+        }
+}
