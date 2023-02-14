@@ -16,4 +16,8 @@
     &:active {
         background-color: $clr-active-active;
     }
+
+    &:focus {
+        @include focus;
+    }
 }

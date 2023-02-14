@@ -4,6 +4,28 @@ body {
     background-color: $clr-basic-white;
 
     @include mq('small') {
-            padding: 0;
-        }
+        padding: 0;
+    }
+}
+
+a:focus-visible {
+    @include focus;
+    border-radius: rem(4);
+}
+
+button:focus-visible {
+    @include focus;
+}
+
+.focus {
+    transition: all $transition-ms ease-in;
+}
+
+a:hover > .focus {
+    color: $clr-accent;
+}
+
+a:focus-visible > .focus {
+    @include focus;
+    border-radius: rem(4);
 }

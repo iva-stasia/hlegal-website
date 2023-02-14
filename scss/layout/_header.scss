@@ -36,6 +36,11 @@
         @include mq('small') {
             width: rem(70);
         }
+
+        &:focus-visible {
+            @include focus;
+            border-radius: rem(4);
+        }
     }
 
     &__page-name {
@@ -87,14 +92,22 @@
 
     &__tel {
         transition: all $transition-ms ease-in;
+
+        &:focus-visible {
+            outline: none;
+        }
     }
 
     &__social-link {
         transition: all $transition-ms ease-in;
 
-        &::after {
+        & span::after {
             content: '\e905';
             font-size: rem(24);
+        }
+
+        &:focus-visible {
+            outline: none;
         }
     }
 

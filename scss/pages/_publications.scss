@@ -54,6 +54,11 @@
         &:checked ~ span {
             translate: 100%;
         }
+
+        &:focus-visible + .switch__label {
+            @include focus;
+            outline-offset: -2px;
+        }
     }
 
     &__label {

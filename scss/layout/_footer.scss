@@ -33,6 +33,10 @@
         &:hover {
            color: $clr-accent; 
         }
+
+        &:focus-visible {
+            outline: none;
+        }
     }
 
     &__contacts {
@@ -64,12 +68,22 @@
         }
     }
 
+    &__tel {
+        &:focus-visible {
+            outline: none;
+        }
+    }
+
     &__email {
         color: $clr-active-reg;
         transition: all $transition-ms ease-in;
 
         &:hover {
             color: $clr-accent;
+        }
+
+        &:focus-visible {
+            outline: none;
         }
     }
 

@@ -47,8 +47,12 @@
                 src: url('#{$file-path}.eot');
             }
             @for $i from 1 through length($file-formats) {
-                $list: append($list, url('#{$file-path}.#{nth($file-formats, $i)}') 
-                format('#{nth($font-formats, $i)}'), $separator: comma);
+                $list: append(
+                    $list,
+                    url('#{$file-path}.#{nth($file-formats, $i)}')
+                        format('#{nth($font-formats, $i)}'),
+                    $separator: comma
+                );
             }
             src: $list;
             font-style: $font-style;
@@ -60,14 +64,14 @@
 }
 
 @mixin mq($breakpoint) {
-    $size: map-get($breakpoints , $breakpoint);
+    $size: map-get($breakpoints, $breakpoint);
     @media screen and (max-width: $size) {
         @content;
     }
 }
 
 @mixin mq-min($breakpoint) {
-    $size: map-get($breakpoints-min , $breakpoint);
+    $size: map-get($breakpoints-min, $breakpoint);
     @media screen and (min-width: $size) {
         @content;
     }
@@ -77,4 +81,9 @@
     display: flex;
     justify-content: $justify;
     align-items: $align;
+}
+
+@mixin focus {
+    outline: 2px solid rgba($clr-accent, 0.7);
+    transition: none;
 }

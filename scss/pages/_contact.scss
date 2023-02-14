@@ -22,7 +22,7 @@
     flex: 1 1 44%;
 
     & > * + * {
-        padding-top: rem(30);
+        margin-top: rem(30);
     }
 
     & > *:not(:last-child) {
@@ -37,7 +37,8 @@
     }
 
     &__facebook {
-        @include flex(flex-start, center);
+        display: inline-flex;
+        align-items: center;
         gap: rem(10);
 
         &::before {

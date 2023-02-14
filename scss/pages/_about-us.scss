@@ -154,6 +154,12 @@
     &__card-link {
         width: 100%;
         height: 100%;
+        border-radius: rem(12);
+
+        &:focus-visible {
+            outline: none;
+            box-shadow: $clr-accent 0 0 0 2px inset;
+        }
     }
 
     &__buttons-container {
