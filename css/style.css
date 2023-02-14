@@ -698,22 +698,22 @@ body {
   border-radius: 1.5rem;
 }
 .services__card-title.e-com::before {
-  content: url(../../assets/images/icons/Ecommerce.svg);
+  content: url(../assets/images/icons/Ecommerce.svg);
 }
 .services__card-title.support::before {
-  content: url(../../assets/images/icons/Support.svg);
+  content: url(../assets/images/icons/Support.svg);
 }
 .services__card-title.corporate::before {
-  content: url(../../assets/images/icons/Coprorate.svg);
+  content: url(../assets/images/icons/Coprorate.svg);
 }
 .services__card-title.trust::before {
-  content: url(../../assets/images/icons/Trust.svg);
+  content: url(../assets/images/icons/Trust.svg);
 }
 .services__card-title.protection::before {
-  content: url(../../assets/images/icons/Protection.svg);
+  content: url(../assets/images/icons/Protection.svg);
 }
 .services__card-title.court::before {
-  content: url(../../assets/images/icons/Court.svg);
+  content: url(../assets/images/icons/Court.svg);
 }
 
 .partners {
@@ -1036,7 +1036,7 @@ body {
   display: flex;
   justify-content: center;
   align-items: center;
-  background: center/auto 100% no-repeat url(../../assets/images/home/h_symbol.svg);
+  background: center/auto 100% no-repeat url(../assets/images/home/h_symbol.svg);
 }
 .banner__title {
   width: 100%;
@@ -1156,7 +1156,7 @@ body {
 }
 .home .carousel__card-photo {
   background-color: grey;
-  background: center/cover no-repeat url(../../assets/images/team/Team-1.jpg);
+  background: center/cover no-repeat url(../assets/images/team/Team-1.jpg);
 }
 .home .carousel__card-content {
   padding: 1.875rem;

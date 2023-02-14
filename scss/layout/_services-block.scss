@@ -32,27 +32,27 @@
         }
 
         &.e-com::before {
-            content: url(../../assets/images/icons/Ecommerce.svg);
+            content: url(../assets/images/icons/Ecommerce.svg);
         }
 
         &.support::before {
-            content: url(../../assets/images/icons/Support.svg);
+            content: url(../assets/images/icons/Support.svg);
         }
 
         &.corporate::before {
-            content: url(../../assets/images/icons/Coprorate.svg);
+            content: url(../assets/images/icons/Coprorate.svg);
         }
 
         &.trust::before {
-            content: url(../../assets/images/icons/Trust.svg);
+            content: url(../assets/images/icons/Trust.svg);
         }
 
         &.protection::before {
-            content: url(../../assets/images/icons/Protection.svg);
+            content: url(../assets/images/icons/Protection.svg);
         }
 
         &.court::before {
-            content: url(../../assets/images/icons/Court.svg);
+            content: url(../assets/images/icons/Court.svg);
         }
     }
 }

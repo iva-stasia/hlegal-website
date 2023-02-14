@@ -40,7 +40,7 @@
     min-height: 100vh;
     @include flex(center, center);
     background: center / auto 100% no-repeat
-        url(../../assets/images/home/h_symbol.svg);
+        url(../assets/images/home/h_symbol.svg);
 
     &__title {
         width: 100%;
@@ -162,7 +162,7 @@
     &__card-photo {
         background-color: grey;
         background: center / cover no-repeat
-            url(../../assets/images/team/Team-1.jpg);
+            url(../assets/images/team/Team-1.jpg);
     }
 
     &__card-content {
