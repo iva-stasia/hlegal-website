@@ -1,5 +1,9 @@
 @use '../abstracts/' as *;
 
+html {
+    scroll-behavior: smooth;
+}
+
 body {
     background-color: $clr-basic-white;
 

@@ -346,6 +346,10 @@ h1, h2, h3, h4, h5, h6 {
   line-height: 1;
 }
 
+html {
+  scroll-behavior: smooth;
+}
+
 body {
   background-color: #FFFFFF;
 }
@@ -1490,16 +1494,6 @@ a:focus-visible > .focus {
   opacity: 0;
   transition: all 200ms ease-in;
 }
-.popup .close-btn {
-  display: none;
-  position: absolute;
-  right: 1.875rem;
-}
-.popup .close-btn::before {
-  content: "\e902";
-  font-size: 2rem;
-  color: #EC6F5D;
-}
 .popup__form {
   position: absolute;
   height: 100vh;
@@ -1520,15 +1514,21 @@ a:focus-visible > .focus {
     border-radius: 0rem;
   }
 }
+.popup__form__close-btn {
+  position: absolute;
+  right: 1.875rem;
+}
+.popup__form__close-btn::before {
+  content: "\e902";
+  font-size: 2rem;
+  color: #EC6F5D;
+}
 .popup-visible {
   visibility: visible;
   opacity: 1;
 }
 .popup-visible .popup__form {
   top: 50%;
-}
-.popup-visible .close-btn {
-  display: inline-block;
 }
 
 .quote {
