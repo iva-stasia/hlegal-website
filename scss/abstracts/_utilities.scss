@@ -117,29 +117,29 @@
     -webkit-text-fill-color: transparent;
 }
 
-.text-white,
-.text-white * {
+.light,
+.light * {
     color: $clr-basic-white;
 }
 
-.text-black,
-.text-black * {
+.dark,
+.dark * {
     color: $clr-basic-black;
 }
 
-.text-grey,
-.text-grey * {
+.primary,
+.primary * {
+    color: $clr-main-reg;
+}
+
+.secondary,
+.secondary * {
     color: $clr-grey-text;
 }
 
 .text-active,
 .text-active * {
     color: $clr-active-reg;
-}
-
-.text-main-reg,
-.text-main-reg * {
-    color: $clr-main-reg;
 }
 
 .active-gradient {

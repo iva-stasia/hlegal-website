@@ -260,29 +260,29 @@ summary::-webkit-details-marker {
   -webkit-text-fill-color: transparent;
 }
 
-.text-white,
-.text-white * {
+.light,
+.light * {
   color: #FFFFFF;
 }
 
-.text-black,
-.text-black * {
+.dark,
+.dark * {
   color: #000000;
 }
 
-.text-grey,
-.text-grey * {
+.primary,
+.primary * {
+  color: #323264;
+}
+
+.secondary,
+.secondary * {
   color: #B3B3BA;
 }
 
 .text-active,
 .text-active * {
   color: #24A3FF;
-}
-
-.text-main-reg,
-.text-main-reg * {
-  color: #323264;
 }
 
 .active-gradient {
